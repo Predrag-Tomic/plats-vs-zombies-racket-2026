@@ -40,9 +40,6 @@
                                 x y
                                 inner-scene)))))
 
-(draw-grid (get-grid 10 6) 10 6 50 "dark green" "black")
-
-
-
 (check-expect (get-grid 3 3) (list (list 0 0 0) (list 0 0 0) (list 0 0 0)))
 (check-expect (make-coin 5 "red") (circle 5 "solid" "red"))
+(check-expect (draw-grid (get-grid 1 1) 1 1 50 "dark green" "black") (place-image (rectangle 50 50 "solid" "dark green") 25 25 (empty-scene 50 50)))
